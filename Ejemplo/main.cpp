@@ -45,11 +45,16 @@ void main()
 	Puntero<NodoABB<Persona>> ABB = new NodoABB<Persona>(Persona("Miguel",123123123));
 	Puntero<NodoABB<Persona>> abb = NULL;
 	ABB->insertoOrdenado(abb, p1, pcd);
+	cout << "Altura: " << ABB->altura(abb) << endl;
 	//muestro(abb);
 	ABB->insertoOrdenado(abb, p2, pcd);
+	cout << "Altura: " << ABB->altura(abb) << endl;
 	ABB->insertoOrdenado(abb, p3, pcd);
+	cout << "Altura: " << ABB->altura(abb) << endl;
 	ABB->insertoOrdenado(abb, p4, pcd);
+	cout << "Altura: " << ABB->altura(abb) << endl;
 	ABB->muestro(abb);
+
 	/*insertoOrdenado(abb, p3, pcd);
 	muestro(abb);*/
 
@@ -70,6 +75,10 @@ void main()
 
 	cout << "AVL";
 	Puntero<NodoAVL<int>> avl = new NodoAVL<int>(10);
+	Puntero<NodoAVL<int>> avl2 = NULL;
+	int altura = avl->altura(avl);
+	cout << "Altura: avl" << altura << endl;
+	cout << "Altura: avl" << avl->altura(avl2) << endl;
 	int x1 = 59;
 	int x2 = 5;
 
@@ -78,7 +87,5 @@ void main()
 	//avl->Insertar(9);
 	//avl->Insertar(19);
 
-	//avl->Borrar(x1);
-	
-
+	//avl->Borrar(x1);	
 }

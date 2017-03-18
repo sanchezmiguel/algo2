@@ -6,7 +6,7 @@
 template<class T>
 NodoABB<T>::NodoABB(T nuevoDato, Puntero<NodoABB<T>> i = NULL, Puntero<NodoABB<T>> d = NULL)
 {
-	dato = nuevoDato; izq = i; der = d;
+	dato = nuevoDato; hIzq = i; hDer = d;
 }
 
 template<class T>
@@ -15,18 +15,18 @@ Puntero<NodoABB<T>> & NodoABB<T>::buscoPos(Puntero<NodoABB<T>> & abb, T d, Punte
 	if (abb == NULL)
 		return abb;
 	else if (comp->EsMayor(abb->dato, d))
-		return buscoPos(abb->der, d, comp);
+		return buscoPos(abb->hDer, d, comp);
 	else
-		return buscoPos(abb->izq, d, comp);
+		return buscoPos(abb->hIzq, d, comp);
 }
 template<class T>
 void NodoABB<T>::muestro(Puntero<NodoABB<T>>  p)
 {
 	if (p != NULL) {
-		Puntero<NodoABB<T>> abb = p->izq;
+		Puntero<NodoABB<T>> abb = p->hIzq;
 		muestro(abb);
 		cout << p->dato << endl;
-		abb = p->der;
+		abb = p->hDer;
 		muestro(abb);
 	}
 }
@@ -39,10 +39,22 @@ void NodoABB<T>::insertoOrdenado(Puntero<NodoABB<T>> & abb, T d, Puntero<Compara
 		p = new NodoABB<T>(d, NULL, NULL);
 	}
 	else if (comp->EsMayor(abb->dato, d))
-		insertoOrdenado(abb->izq, d, comp);
+		insertoOrdenado(abb->hIzq, d, comp);
 	else
-		insertoOrdenado(abb->der, d, comp);
+		insertoOrdenado(abb->hDer, d, comp);
 
+}
+
+template<class T>
+int NodoABB<T>::altura(Puntero<NodoABB<T>> abb)
+{
+	int h = 0;
+	if (abb != NULL) {
+		int ai = altura(abb->hIzq);
+		int ad = altura(abb->hDer);
+		h = max(ai, ad) + 1;
+	}
+	return h;
 }
 
 

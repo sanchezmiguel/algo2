@@ -6,8 +6,14 @@ template <class T>
 class NodoAVL
 {
 	typedef Puntero<NodoAVL> pNodoAvl;
+#define max(a,b) (((a) > (b)) ? (a) : (b))
 
 public:
+	T dato;
+	pNodoAvl hIzq;
+	pNodoAvl hDer;
+	int fb;
+	
 	NodoAVL(const T& d);
 	NodoAVL(const T& d, pNodoAvl izq, pNodoAvl der);
 	~NodoAVL() {}
@@ -16,10 +22,7 @@ public:
 	bool operator<(const NodoAVL<T>& nodo);
 	bool operator>(const NodoAVL<T>& nodo);
 
-	T dato;
-	pNodoAvl hIzq;
-	pNodoAvl hDer;
-	int fb;
+	int altura(pNodoAvl nodo);
 };
 
 #include "NodoAVL.cpp"
