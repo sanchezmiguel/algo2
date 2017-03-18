@@ -11,7 +11,10 @@
 #include "avl.h"
 #include "NodoLista.h"
 #include "NodoABB.h"
+#include "Tool.h"
+#include "ComparaInt.h"
 
+#include "Array.h"
 
 void main()
 {
@@ -46,13 +49,24 @@ void main()
 	Puntero<NodoABB<Persona>> abb = NULL;
 	ABB->insertoOrdenado(abb, p1, pcd);
 	cout << "Altura: " << ABB->altura(abb) << endl;
+	cout << "Peso: " << ABB->Peso(abb) << endl;
 	//muestro(abb);
 	ABB->insertoOrdenado(abb, p2, pcd);
 	cout << "Altura: " << ABB->altura(abb) << endl;
+	cout << "Peso: " << ABB->Peso(abb) << endl;
 	ABB->insertoOrdenado(abb, p3, pcd);
+
+	cout << "Existe: (True)" << ABB->Existe(abb,p3,pcd) << endl;
+	cout << "Existe: (True)" << ABB->Existe(abb, p2, pcd) << endl;
+	cout << "Existe: (True)" << ABB->Existe(abb, p1, pcd) << endl;
+	cout << "Existe: (False)" << ABB->Existe(abb, p4, pcd) << endl;
+
 	cout << "Altura: " << ABB->altura(abb) << endl;
+	cout << "Peso: " << ABB->Peso(abb) << endl;
 	ABB->insertoOrdenado(abb, p4, pcd);
 	cout << "Altura: " << ABB->altura(abb) << endl;
+	cout << "Peso: " << ABB->Peso(abb) << endl;
+	cout << "Cantidad Nodos: " << ABB->CantidadNodos(abb) << endl;
 	ABB->muestro(abb);
 
 	/*insertoOrdenado(abb, p3, pcd);
@@ -88,4 +102,34 @@ void main()
 	//avl->Insertar(19);
 
 	//avl->Borrar(x1);	
+
+	cout << endl;
+	cout << "MCD: " << Tool::MCD(1000, 1000) << endl;
+	cout << "Potencia 2^1: " << Tool::Potencia(2, 1) << endl;
+	cout << "Potencia 2^3: " << Tool::Potencia(2, 3) << endl;
+	cout << "Potencia 2^16: " << Tool::Potencia(2, 16) << endl;
+
+
+
+	/*********/
+	Puntero<Comparador<int>> pcInt = new Comparador<int>(new ComparaInt);
+	Puntero<NodoABB<int>> abbInt = NULL;
+	
+	Array<int> enteros =  Array<int>(100,0);
+
+	NodoABB<int>::insertoOrdenado(abbInt, 10, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 2, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 15, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 3, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 12, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 22, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 16, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 1, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 26, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 13, pcInt);
+	NodoABB<int>::insertoOrdenado(abbInt, 11, pcInt);
+
+	cout << "Altura: " << abbInt->altura(abbInt) << endl;
+	cout << "Peso: " << abbInt->Peso(abbInt) << endl;
+	cout << "Cantidad Nodos: " << abbInt->CantidadNodos(abbInt) << endl;
 }

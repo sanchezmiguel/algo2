@@ -57,5 +57,38 @@ int NodoABB<T>::altura(Puntero<NodoABB<T>> abb)
 	return h;
 }
 
+template<class T>
+bool NodoABB<T>::Existe(Puntero<NodoABB<T>> & abb, T d, Puntero<Comparador<T>> comp)
+{
+	if (abb == NULL) {
+		return false;
+	}
+	else if (comp->SonIguales(abb->dato, d)) {
+		return true;
+	}
+	else if (comp->EsMayor(abb->dato, d))
+		return Existe(abb->hIzq, d, comp);
+	else
+		return Existe(abb->hDer, d, comp);
+}
+
+template<class T>
+int NodoABB<T>::Peso(Puntero<NodoABB<T>>& abb)
+{
+	if (abb != NULL) {
+		return CantidadNodos(abb->hIzq) + CantidadNodos(abb->hDer);
+	}
+	return 0;
+}
+
+template<class T>
+int NodoABB<T>::CantidadNodos(Puntero<NodoABB<T>>& abb)
+{
+	if (abb != NULL) {
+		return CantidadNodos(abb->hIzq) + CantidadNodos(abb->hDer) + 1;
+	}
+	return 0;
+}
+
 
 #endif

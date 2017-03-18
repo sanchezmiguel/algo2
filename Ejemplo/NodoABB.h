@@ -12,8 +12,14 @@ public:
 	~NodoABB() {}	
 	Puntero<NodoABB<T>> & buscoPos(Puntero<NodoABB<T>> & abb, T d, Puntero<Comparador<T>> comp);
 	void muestro(Puntero<NodoABB<T>>  p);
-	void insertoOrdenado(Puntero<NodoABB<T>> & abb, T d, Puntero<Comparador<T>> comp);
+	static void insertoOrdenado(Puntero<NodoABB<T>> & abb, T d, Puntero<Comparador<T>> comp);
 	int altura(Puntero<NodoABB<T>> abb);
+	bool Existe(Puntero<NodoABB<T>> & abb, T d, Puntero<Comparador<T>> comp);
+
+	/* Peso. Es el número de nodos del árbol sin contar la raíz	*/
+	int Peso(Puntero<NodoABB<T>> & abb);
+
+	int CantidadNodos(Puntero<NodoABB<T>> & abb);
 };
 
 #include "NodoABB.cpp"

@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AVL.h" />
+    <ClInclude Include="ComparaInt.h" />
     <ClInclude Include="ComparaPersonasPorNombreYCedulaAscendente.h" />
     <ClInclude Include="ComparaPersonasPorNombreYCedulaDescendente.h" />
     <ClInclude Include="Grafo.h" />
@@ -111,8 +112,10 @@
     <ClInclude Include="NodoSet.h" />
     <ClInclude Include="SetNoAcotado.h" />
     <ClInclude Include="Tabla.h" />
+    <ClInclude Include="Tool.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ComparaInt.cpp" />
     <ClCompile Include="ComparaPersonasPorNombreYCedulaAscendente.cpp" />
     <ClCompile Include="ComparaPersonasPorNombreYCedulaDescendente.cpp" />
     <ClCompile Include="NodoABB.cpp" />
@@ -123,6 +126,7 @@
     <ClCompile Include="IteradorNoAcotado.cpp" />
     <ClCompile Include="SetNoAcotado.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Tool.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

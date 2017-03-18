@@ -29,6 +29,12 @@
     <ClCompile Include="NodoAVL.cpp">
       <Filter>TADs</Filter>
     </ClCompile>
+    <ClCompile Include="Tool.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ComparaInt.cpp">
+      <Filter>Comparadores</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IteradorNoAcotado.h">
@@ -73,6 +79,12 @@
     <ClInclude Include="NodoAVL.h">
       <Filter>TADs</Filter>
     </ClInclude>
+    <ClInclude Include="Tool.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ComparaInt.h">
+      <Filter>Comparadores</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TADs">
@@ -95,6 +107,9 @@
     </Filter>
     <Filter Include="Comparadores\ComparadoresPersona">
       <UniqueIdentifier>{096a52e0-7d16-456d-b141-7e4a9934f910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{69622ae1-a16b-4bba-a3e2-378edc71ae7c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
