@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="IteradorNoAcotado.cpp">
+      <Filter>TADs\Set\NoAcotado</Filter>
+    </ClCompile>
+    <ClCompile Include="SetNoAcotado.cpp">
+      <Filter>TADs\Set\NoAcotado</Filter>
+    </ClCompile>
+    <ClCompile Include="SetAcotado.cpp">
+      <Filter>TADs\Set\Acotado</Filter>
+    </ClCompile>
+    <ClCompile Include="Persona.cpp">
+      <Filter>Ejercicio</Filter>
+    </ClCompile>
+    <ClCompile Include="ComparaPersonasPorNombreYCedulaDescendente.cpp">
+      <Filter>Comparadores\ComparadoresPersona</Filter>
+    </ClCompile>
+    <ClCompile Include="NodoABB.cpp">
+      <Filter>TADs</Filter>
+    </ClCompile>
+    <ClCompile Include="NodoLista.cpp">
+      <Filter>TADs</Filter>
+    </ClCompile>
+    <ClCompile Include="ComparaPersonasPorNombreYCedulaAscendente.cpp">
+      <Filter>Comparadores\ComparadoresPersona</Filter>
+    </ClCompile>
+    <ClCompile Include="NodoAVL.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IteradorNoAcotado.h">
+      <Filter>TADs\Set\NoAcotado</Filter>
+    </ClInclude>
+    <ClInclude Include="SetNoAcotado.h">
+      <Filter>TADs\Set\NoAcotado</Filter>
+    </ClInclude>
+    <ClInclude Include="Set.h">
+      <Filter>TADs\Set</Filter>
+    </ClInclude>
+    <ClInclude Include="SetAcotado.h">
+      <Filter>TADs\Set\Acotado</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoSet.h">
+      <Filter>TADs\Set\NoAcotado</Filter>
+    </ClInclude>
+    <ClInclude Include="AVL.h">
+      <Filter>TADs</Filter>
+    </ClInclude>
+    <ClInclude Include="Tabla.h">
+      <Filter>TADs</Filter>
+    </ClInclude>
+    <ClInclude Include="Grafo.h">
+      <Filter>TADs</Filter>
+    </ClInclude>
+    <ClInclude Include="Persona.h">
+      <Filter>Ejercicio</Filter>
+    </ClInclude>
+    <ClInclude Include="ComparaPersonasPorNombreYCedulaDescendente.h">
+      <Filter>Comparadores\ComparadoresPersona</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoABB.h">
+      <Filter>TADs</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoLista.h">
+      <Filter>TADs</Filter>
+    </ClInclude>
+    <ClInclude Include="ComparaPersonasPorNombreYCedulaAscendente.h">
+      <Filter>Comparadores\ComparadoresPersona</Filter>
+    </ClInclude>
+    <ClInclude Include="NodoAVL.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="TADs">
+      <UniqueIdentifier>{7750330d-753d-470d-8f5a-131add909339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TADs\Set">
+      <UniqueIdentifier>{bae96ffb-9ccf-4f12-917f-10111ea4454a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TADs\Set\Acotado">
+      <UniqueIdentifier>{b70a49a1-0074-4d8f-aa6b-a4ce74d30f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TADs\Set\NoAcotado">
+      <UniqueIdentifier>{64b63581-1a5d-46cd-9945-ae00aa747ff7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ejercicio">
+      <UniqueIdentifier>{7adbd0c7-7c6f-484b-89e8-7a05b44169ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comparadores">
+      <UniqueIdentifier>{2ba77416-3685-41e9-88a5-4877d9523208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Comparadores\ComparadoresPersona">
+      <UniqueIdentifier>{096a52e0-7d16-456d-b141-7e4a9934f910}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
